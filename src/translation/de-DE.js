@@ -1,5 +1,5 @@
 const translation = {
-    title: 'P3X OneNote',
+    title: 'Microsoft OneNote Web',
     restart: 'Bitte warten Sie, die Anwendung wird neu gestartet.',
     label: {
         darkThemeInvert: {

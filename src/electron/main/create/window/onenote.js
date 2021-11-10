@@ -80,16 +80,15 @@ function createWindow() {
         })
     });
 
-    if (!process.argv.includes('--minimized')) {
-        //const windowBounds = global.p3x.onenote.conf.get('window-bounds');
-        const maximized = global.p3x.onenote.conf.get('maximized');
+    //if (!process.argv.includes('--minimized')) {
         const windowBounds = global.p3x.onenote.conf.get('window-bounds');
+        const maximized = global.p3x.onenote.conf.get('maximized');
 
         if (maximized === true) {
             global.p3x.onenote.window.onenote.maximize()
         }
 
-    }
+    //}
 
     
     else if (windowBounds !== null && windowBounds !== undefined) {

@@ -1,5 +1,5 @@
 {
-    "name": "p3x-onenote",
+    "name": "Microsoft OneNote Web",
     "version": "2021.10.174",
     "description": "📚 P3X OneNote Linux",
     "main": "src/electron/app.js",
@@ -59,10 +59,11 @@
         "angular-material": "^1.2.3",
         "angular-messages": "^1.8.2",
         "corifeus-utils": "^2021.10.171",
+        "electron": "^15.3.1",
         "electron-store": "^8.0.1",
         "electron-updater": "^4.3.9",
-        "semver": "^7.3.5",
-        "electron": "^15.3.1"
+        "express": "^4.17.1",
+        "semver": "^7.3.5"
     },
     "devDependencies": {
         "corifeus-builder": "^2021.10.169",

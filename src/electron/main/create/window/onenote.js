@@ -91,7 +91,7 @@ function createWindow() {
 
     }
 
-    /*
+    
     else if (windowBounds !== null && windowBounds !== undefined) {
         global.p3x.onenote.window.onenote.setBounds(windowBounds);
     }

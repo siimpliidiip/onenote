@@ -7,6 +7,39 @@
 
 ## Change log
 
+
+### v2021.10.167
+Released on 10/28/2021
+* BUGFIX: Enhance boot speed - 1 second faster (but it is still very slow, because the Electron webview issues)
+
+
+### v2021.10.165
+Released on 10/28/2021
+* BUGFIX: https://github.com/patrikx3/onenote/issues/157
+
+
+### v2021.10.158
+Released on 10/26/2021
+* FEATURE: Changed the `change-log.md` file name.
+
+
+
+### v2021.10.155
+Released on 10/21/2021
+* FEATURE: Optimized boot speed.
+
+### v2021.10.133 - 9/30/2021
+* FEATURE: Added `--minimized` argument.
+
+### v2021.10.130
+* BUGFIX: Fix Electron 14 error.
+
+### v2021.10.111
+* BUGFIX: Replace `configstore` to `electron-store`
+
+### v2021.10.109
+* FEATURE: In the link popup external buttons moved from center to the right. 
+
 ### v2021.10.108
 * BUGFIX: https://github.com/patrikx3/onenote/issues/152
 
@@ -288,7 +321,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-ONENOTE**](https://corifeus.com/onenote) Build v2021.10.108
+[**P3X-ONENOTE**](https://corifeus.com/onenote) Build v2021.10.174
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

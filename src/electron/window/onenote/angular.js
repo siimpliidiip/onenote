@@ -1,16 +1,9 @@
-const remote = require("@electron/remote");
-const {shell} = require("electron");
+//const remote = require("@electron/remote");
+//const {shell} = require("electron");
 const execAsync = async () => {
 
     const {shell} = require('electron');
-    const remote = require('@electron/remote')
-
-    let win
-    while(!win) {
-        const BrowserWindow = remote.BrowserWindow;
-        win = BrowserWindow.getFocusedWindow();
-        await new Promise(resolve => setTimeout(resolve, 100))
-    }
+    //const remote = require('@electron/remote')
 
     require('angular/angular');
     require('angular-aria');
@@ -28,8 +21,9 @@ const execAsync = async () => {
     if (zoom === undefined) {
         zoom = 1.0
     }
+
     if (zoom !== 1.0) {
-        win.webContents.setZoomFactor(zoom);
+        global.p3x.onenote.webview.setZoomFactor(zoom);
     }
 
     /*
@@ -75,7 +69,7 @@ const execAsync = async () => {
                     shell.openExternal('https://paypal.me/patrikx3')
                 },
                 zoom: (zoom) => {
-                    const currentZoom = win.webContents.getZoomFactor();
+                    const currentZoom = global.p3x.onenote.webview.getZoomFactor();
                     let value
                     if (zoom >= 0) {
                         value = currentZoom + 0.1;
@@ -83,12 +77,12 @@ const execAsync = async () => {
                         value = currentZoom - 0.1;
                     }
                     if (value >= 0.75 && value <= 5.0) {
-                        win.webContents.zoomFactor = value
-                        p3x.onenote.conf.set('zoom', win.webContents.zoomFactor)
+                        global.p3x.onenote.webview.setZoomFactor(value)
+                        p3x.onenote.conf.set('zoom', value)
                     }
                 },
                 get zoomFactor() {
-                    return (win.webContents.zoomFactor * 100).toFixed(0)
+                    return (global.p3x.onenote.webview.getZoomFactor() * 100).toFixed(0)
                 }
             }
         }

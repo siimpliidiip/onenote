@@ -11,7 +11,7 @@
 
 
 
-# 📚 P3X OneNote Linux v2021.10.108
+# 📚 P3X OneNote Linux v2021.10.174
 
 
 
@@ -46,6 +46,8 @@ P3X OneNote Linux is, actually, an independent browser window for the online One
 * Dark mode is enabled (but it is a hack, not supported by Microsoft, so quirky)
 * To show the menu, click ALT
 * Desktop menu
+* You can use the `--minimized` argument to start the app with minimized window
+* You can zoom the window
 * Icon
 * There is a bottom bar
     * It shows the current location
@@ -83,7 +85,15 @@ P3X OneNote Linux is, actually, an independent browser window for the online One
 
 https://github.com/patrikx3/onenote/releases
 
-After downloading the ```AppImage```, make it an executable.
+#### To integrate into the menu
+Execute:
+```bash
+sudo add-apt-repository ppa:appimagelauncher-team/stable
+sudo apt-get update
+sudo apt-get install appimagelauncher
+```
+
+#### After downloading the ```AppImage```, make it an executable.
 ```bash
 mkdir -p $HOME/opt
 mv ~/Downloads/p3x-onenote-a.b.c-x86_64.AppImage $HOME/opt/
@@ -100,7 +110,7 @@ It then actually integrates itself into the menus and it will auto update itself
   
 The app can be found on [ElectronJs Apps](https://electronjs.org/apps/p3x-onenote)
 
-[Change log](changelog.md)
+[Change log](change-log.md)
 
 
 <!--
@@ -228,7 +238,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
 
-[**P3X-ONENOTE**](https://corifeus.com/onenote) Build v2021.10.108
+[**P3X-ONENOTE**](https://corifeus.com/onenote) Build v2021.10.174
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software)
 

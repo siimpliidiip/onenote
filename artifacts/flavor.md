@@ -4,11 +4,10 @@
 
                         
 [//]: #@corifeus-header:end
+https://github.com/anujdatar/onenote-desktop/blob/master/package.json  
+https://github.com/peterforgacs/electron-onenote  
 
-```bash
-sudo apt-get install qemu-user qemu-user-static qemu-user-binfmt
-sudo apt-get remove --purge qemu-user qemu-user-static qemu-user-binfmt
-```
+
 
 [//]: #@corifeus-footer
 

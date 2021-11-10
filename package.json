@@ -1,6 +1,6 @@
 {
     "name": "p3x-onenote",
-    "version": "2021.10.108",
+    "version": "2021.10.174",
     "description": "📚 P3X OneNote Linux",
     "main": "src/electron/app.js",
     "corifeus": {
@@ -11,7 +11,7 @@
         "publish": true,
         "type": "p3x",
         "code": "Linux",
-        "nodejs": "v14.17.5",
+        "nodejs": "v16.13.0",
         "reponame": "onenote",
         "build": true,
         "opencollective": false,
@@ -21,6 +21,7 @@
         "p3x-onenote": "bin/p3x-onenote.js"
     },
     "scripts": {
+        "run": "electron --no-sandbox .",
         "test": "grunt",
         "build": "electron-builder --x64  build/dist",
         "build-test": "electron-builder build/dist -p always",
@@ -49,24 +50,23 @@
     },
     "homepage": "https://corifeus.com/onenote",
     "dependencies": {
-        "@electron/remote": "^1.2.1",
-        "@fontsource/roboto": "^4.5.0",
+        "@electron/remote": "^2.0.1",
+        "@fontsource/roboto": "^4.5.1",
         "@fortawesome/fontawesome-free": "^5.15.4",
         "angular": "^1.8.2",
         "angular-animate": "^1.8.2",
         "angular-aria": "^1.8.2",
         "angular-material": "^1.2.3",
         "angular-messages": "^1.8.2",
-        "configstore": "^4.0.0",
-        "corifeus-utils": "^2021.10.101",
+        "corifeus-utils": "^2021.10.171",
+        "electron-store": "^8.0.1",
         "electron-updater": "^4.3.9",
-        "opencollective": "^1.0.3",
         "semver": "^7.3.5",
-        "electron": "^13.2.0"
+        "electron": "^15.3.1"
     },
     "devDependencies": {
-        "corifeus-builder": "^2021.10.101",
-        "electron-builder": "^22.11.7"
+        "corifeus-builder": "^2021.10.169",
+        "electron-builder": "^22.13.1"
     },
     "engines": {
         "node": ">=12.13.0"

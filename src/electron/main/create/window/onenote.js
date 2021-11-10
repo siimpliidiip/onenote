@@ -3,6 +3,8 @@ const {BrowserWindow, app} = require('electron');
 
 function createWindow() {
 
+    const remoteMain = require("@electron/remote/main")
+    remoteMain.initialize()
 
     global.p3x.onenote.window.onenote = new BrowserWindow({
         icon: global.p3x.onenote.iconFile,
@@ -10,7 +12,7 @@ function createWindow() {
         backgroundColor: '#CA64EA',
         autoHideMenuBar: global.p3x.onenote.optionToHideMenu,
         webPreferences: {
-            enableRemoteModule: true,
+            nativeWindowOpen: true,
             worldSafeExecuteJavaScript: true,
             nodeIntegration: true,
             nodeIntegrationInSubFrames: true,
@@ -18,16 +20,16 @@ function createWindow() {
             webviewTag: true,
         }
     });
+    global.p3x.onenote.window.onenote.loadURL(`file://${__dirname}/../../../window/onenote/index.html`);
 
-    require('@electron/remote/main').initialize()
+    remoteMain.enable(global.p3x.onenote.window.onenote.webContents)
+
 
     if (process.env.NODE_ENV === 'debug') {
         global.p3x.onenote.window.onenote.openDevTools()
     }
 
-    global.p3x.onenote.setVisible(true);
-
-    global.p3x.onenote.window.onenote.loadURL(`file://${__dirname}/../../../window/onenote/index.html`);
+    global.p3x.onenote.setVisible(process.argv.includes('--minimized') ? false : true);
 
     global.p3x.onenote.window.onenote.on('minimize', function (event) {
         //event.preventDefault()
@@ -78,14 +80,18 @@ function createWindow() {
         })
     });
 
+    if (!process.argv.includes('--minimized')) {
+        //const windowBounds = global.p3x.onenote.conf.get('window-bounds');
+        const maximized = global.p3x.onenote.conf.get('maximized');
+        const windowBounds = global.p3x.onenote.conf.get('window-bounds');
 
-    const windowBounds = global.p3x.onenote.conf.get('window-bounds');
-    const maximized = global.p3x.onenote.conf.get('maximized');
+        if (maximized === true) {
+            global.p3x.onenote.window.onenote.maximize()
+        }
 
-   if (maximized === true) {
-       global.p3x.onenote.window.onenote.maximize()
-   }
+    }
 
+    /*
     else if (windowBounds !== null && windowBounds !== undefined) {
         global.p3x.onenote.window.onenote.setBounds(windowBounds);
     }
